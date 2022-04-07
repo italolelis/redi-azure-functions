@@ -1,0 +1,13 @@
+{
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0F3236",
+        "titleBar.activeBackground": "#15464C",
+        "titleBar.activeForeground": "#F7FCFD"
+    }
+}
