@@ -7,7 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: "List files before checkout"
+        run: ls
+
       - uses: actions/checkout@v3
+      
+      - name: "List files after checkout"
+        run: ls
+
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
@@ -15,7 +22,7 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_PYTHON: true
-          
+
   build:
     needs: [lint]
     runs-on: ubuntu-latest
