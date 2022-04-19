@@ -5,22 +5,18 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix:
-    #     python-version: ["3.8", "3.9", "3.10"]
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
 
     steps:
     - uses: actions/checkout@v3
 
-    - name: List Directories
-      run: ls
-
-    # - name: Set up Python ${{ matrix.python-version }}
-    #   uses: actions/setup-python@v3
-    #   with:
-    #     python-version: "3.9"
-        # python-version: ${{ matrix.python-version }}
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
         
-    # - name: Install dependencies
-    #   run: |
-    #     python -m pip install --upgrade pip
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
