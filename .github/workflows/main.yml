@@ -1,12 +1,6 @@
 name: Pylint
 
-on:
-  issues:
-    types: [opened, edited, milestoned]
-  issue_comment:
-    types: [created, deleted]
-  label:
-    types: [created, deleted]
+on: [push]
 
 jobs:
   build:
