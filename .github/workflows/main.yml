@@ -38,6 +38,6 @@ jobs:
         uses: Azure/functions-action@v1
         id: fa
         with:
-        app-name: italo-azure-function-test
-        package: '.'
-        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+          app-name: italo-azure-function-test
+          package: '.'
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
